@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWApi Challenge</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="header__logo">
+          <img src="assets/images/logo.svg" alt="Star Wars Brand" />
+          <h1>Planets <strong>Timeline</strong></h1>
+        </a>
+
+        <div class="header__filter filter">
+          <h2 class="filter__heading">
+            Filtra i pianeti in base alla data di creazione:
+          </h2>
+          <form class="form" id="formDates">
+            <div class="form__item">
+              <input
+                type="date"
+                name="startDate"
+                id="start-date"
+                placeholder="gg/mm/aaaa"
+              />
+              <label for="start-date">Inizio</label>
+            </div>
+
+            <div class="form__item">
+              <input
+                type="date"
+                name="endDate"
+                id="end-date"
+                placeholder="gg/mm/aaaa"
+              />
+              <label for="end-date">Fine</label>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Filtra</button>
+          </form>
+        </div>
+
+        <button type="button" class="btn btn--primary" id="changeOrder">
+          Cambia l'ordine
+          <svg>
+            <use xlink:href="assets/images/icons.svg#gg-reorder" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="container container--narrow">
+        <ul class="timeline"></ul>
+      </div>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

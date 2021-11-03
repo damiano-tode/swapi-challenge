@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;600&display=swap');
+@import 'variables';
+@import 'mixins';
+@import 'general';
+@import 'buttons';
+@import 'header';
+@import 'timeline';
+
+body {
+  background-color: pink !important;
+}

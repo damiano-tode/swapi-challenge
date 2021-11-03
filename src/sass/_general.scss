@@ -1,0 +1,87 @@
+:root {
+  --ff-main: 'Exo', sans-serif;
+  --ff-size: 1.8rem;
+
+  --clr-primary: #{$clr-primary};
+  --clr-secondary: #{$clr-secondary};
+  --clr-dark: #{$clr-dark};
+  --clr-white: #{$clr-white};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body,
+input,
+button {
+  font-family: var(--ff-main);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: linear-gradient(rgba($clr-dark, 0.9), rgba($clr-dark, 0.9)),
+    var(--clr-dark) url('../images/bg-planet.jpg') center no-repeat;
+  background-size: cover;
+  color: var(--clr-white);
+
+  min-height: 100vh;
+  padding-bottom: 10vh;
+
+  @include mq($bp-desktop) {
+    border: 1rem solid rgba($clr-white, 0.15);
+  }
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--clr-white);
+  }
+}
+
+svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+  max-width: 140rem;
+
+  &--narrow {
+    max-width: 96rem;
+  }
+}
+
+.page-content {
+  @include mq($bp-desktop) {
+    padding-top: 25vh;
+  }
+}
